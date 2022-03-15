@@ -24,7 +24,7 @@ export const Activities:React.FC<Props> = ({activity}) => {
           alignItems: 'center',
           color: '#fff'
           
-           }} aria-atomic={true} key={activity.id}>
+           }} aria-atomic={true}>
           <List sx={{
             display: 'grid',
             alignItems: 'center',

@@ -25,7 +25,7 @@ function App() {
       height: '100%',
       width: '100%'
     }} >
-      {activities && activities.map((activity: AType) => <Activities activity={activity} />)}
+      {activities && activities.map((activity: AType) => <Activities key={activity.id} activity={activity} />)}
     </Box>
   );
 }
