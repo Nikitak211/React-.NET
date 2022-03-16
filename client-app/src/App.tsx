@@ -6,8 +6,10 @@ import { useAppDispatch, useAppSelector } from './app/hooks';
 import { AType } from './features/activitiesType';
 
 import {Activities} from './components/Activities/Activities';
+import React from 'react';
 
-function App() {
+const App:React.FC = () => {
+
   const dispatch = useAppDispatch();
   const activities = useAppSelector(state => state.activities.activities!);
   useEffect(() => {
@@ -15,6 +17,7 @@ function App() {
       fetchActivities('http://localhost:5000/api/activities')
     )
   }, []);
+
   return (
     <Box sx={{
       display: 'grid',
